@@ -62,31 +62,26 @@ class _DesktopViewState extends State<DesktopView>
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
-                        BuildHeader(
-                          model: model.completedProjectList[model.selectedIndex],
-                        ),
+                        const BuildHeader(),
                         const SizedBox(height: 20),
                         ListView(
                           physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           children: List.generate(
                               model.completedProjectList.length,
-                              (index) => GestureDetector(
-                                onTap: ()=>model.updateIndex(index),
-                                child: CompletedProjectWidget(
-                                      images: model
-                                          .completedProjectList[index].images,
-                                      projectName: model
-                                          .completedProjectList[index]
-                                          .projectName,
-                                      projectShortDesc: model
-                                          .completedProjectList[index]
-                                          .projectShortDesc,
-                                      roleTaken: model
-                                          .completedProjectList[index].roleTaken,
-                                      model: model.completedProjectList[index],
-                                    ),
-                              )),
+                              (index) => CompletedProjectWidget(
+                                    images: model
+                                        .completedProjectList[index].images,
+                                    projectName: model
+                                        .completedProjectList[index]
+                                        .projectName,
+                                    projectShortDesc: model
+                                        .completedProjectList[index]
+                                        .projectShortDesc,
+                                    roleTaken: model
+                                        .completedProjectList[index].roleTaken,
+                                    model: model.completedProjectList[index],
+                                  )),
                         )
                       ],
                     ),

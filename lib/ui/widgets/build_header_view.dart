@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/app/app_setup.dialog.dart';
-import 'package:stacked_services/stacked_services.dart';
 
-import '../../app/app_setup.locator.dart';
 import '../styles/decoration.dart';
 import '../styles/texts.dart';
-import '../views/home_page/view_model/home_viewmodel.dart';
-import 'base_button.dart';
+import 'buttons/base_button.dart';
 
 class BuildHeader extends StatelessWidget {
-  BuildHeader({Key? key, this.model}) : super(key: key);
-  // final service = locator<NavigationService>();
-  final CompletedModel? model;
-  final dialog = locator<DialogService>();
+  const BuildHeader({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -48,12 +41,7 @@ class BuildHeader extends StatelessWidget {
           const Padding(padding: EdgeInsets.all(10)),
           BaseButton(
             text: 'View My Works',
-            onPress: () async{
-              await dialog.showCustomDialog(
-              variant: DialogType.basicDialog,
-              data: model,
-              barrierDismissible: true);
-            },
+            onPress: () {},
           ),
         ],
       ),

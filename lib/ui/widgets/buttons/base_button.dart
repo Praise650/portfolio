@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/styles/color.dart';
 
-import '../styles/texts.dart';
+import '../../styles/texts.dart';
 
 class BaseButton extends StatelessWidget {
   final Function()? onPress;

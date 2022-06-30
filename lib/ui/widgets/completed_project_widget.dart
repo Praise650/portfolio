@@ -5,7 +5,7 @@ import 'package:portfolio/ui/styles/texts.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
-import '../setup_dialog/normal_flutter_dialog.dart';
+import '../views/completed_project_details_desc_view.dart';
 import '../views/home_page/view_model/home_viewmodel.dart';
 
 class CompletedProjectWidget extends StatelessWidget {
@@ -64,8 +64,8 @@ class CompletedProjectWidget extends StatelessWidget {
           TextButton.icon(
             onPressed: () {
               service.navigateToView(
-                NormalFlutterDialog(model: model!),
-                fullscreenDialog: true,
+                CompletedProjectDetailsDescView(model: model!),
+                // fullscreenDialog: true,
               );
             },
             icon: Text('More About This Project'.toUpperCase()),
