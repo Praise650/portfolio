@@ -9,10 +9,13 @@ class BuildHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(
-        left: 20,
-        top: 20,
-        bottom: 20,
+      padding: const EdgeInsets.symmetric(
+        vertical: 20,
+        horizontal: 20,
+        // left: 20,
+        // top: 20,
+        // right: ,
+        // bottom: 20,
       ),
       margin: const EdgeInsets.symmetric(horizontal: 10),
       width: double.infinity,
@@ -31,6 +34,7 @@ class BuildHeader extends StatelessWidget {
             style: kBody1TextStyle,
           ),
           const Padding(padding: EdgeInsets.all(10)),
+          //TODO: wrap widget with flexible to check for responsiveness
           Text(
             'I am a Mobile Developer, and front end specialist from Nigeria. What started off 14 years ago as an adventure\n'
             'through wireframes and layouts, has turned into passion for front end development and game\n.'

@@ -33,7 +33,7 @@ class BasicDialog extends StatelessWidget{
                           },
                         ),
                       ),
-                      Text('Basic Dialog',style: TextStyle(
+                      const Text('Basic Dialog',style: TextStyle(
                         fontSize: 50
                       ),)
                     ],

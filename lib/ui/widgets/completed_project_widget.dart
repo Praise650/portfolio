@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/styles/dimens.dart';
 import 'package:portfolio/ui/styles/texts.dart';
+import 'package:portfolio/ui/views/responsive_view.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
@@ -35,7 +36,7 @@ class CompletedProjectWidget extends StatelessWidget {
           CarouselSlider(
             items: images.map((e) => Image.asset(e)).toList(),
             options: CarouselOptions(
-              height: 300,
+              height: ResponsiveView.isMobile(context)?200:300,
               aspectRatio: 1,
               enlargeCenterPage: true,
               enlargeStrategy: CenterPageEnlargeStrategy.scale,

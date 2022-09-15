@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/layouts/base_scaffold.dart';
+import 'package:portfolio/ui/layouts/base_scaffold_body.dart';
 import 'package:portfolio/ui/styles/color.dart';
 import 'package:portfolio/ui/views/home_page/view_model/home_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../styles/texts.dart';
 import '../../widgets/build_header_view.dart';
 import '../../widgets/completed_project_widget.dart';
 
@@ -33,40 +33,50 @@ class _DesktopViewState extends State<DesktopView>
           return BaseScaffold(
             body: Row(
               children: [
-                // TabBar(tabs: [
-                //   Tab(text: 'Selected Works',),
-                //   Tab(text: 'About Me',),
-                //   Tab(text: 'Get In Touch',),
-                // ],
-                // controller: controller,
-                // ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Selected Works',
-                      style: kHeadline4TextStyle,
+                RotatedBox(
+                  quarterTurns: 3,
+                  child: TabBar(
+                    indicator: const UnderlineTabIndicator(
+                      borderSide: BorderSide.none
                     ),
-                    Text(
-                      'About Me',
-                      style: kHeadline4TextStyle,
-                    ),
-                    Text(
-                      'Get In Touch',
-                      style: kHeadline4TextStyle,
-                    ),
-                  ],
+                    tabs: const [
+                    Tab(text: 'About Me',),
+                    Tab(text: 'Get In Touch',),
+                    Tab(text: 'Selected Works',),
+                  ].reversed.toList(),
+                  controller: controller,
+                  ),
                 ),
+                // RotatedBox(
+                //   quarterTurns: 3,
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //     children: [
+                //       Text(
+                //         'Get In Touch',
+                //         style: kHeadline4TextStyle,
+                //       ),
+                //       Text(
+                //         'About Me',
+                //         style: kHeadline4TextStyle,
+                //       ),
+                //       Text(
+                //         'Selected Works',
+                //         style: kHeadline4TextStyle,
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 VerticalDivider(color: AppColor.primarySwatch.shade50),
                 Expanded(
-                  child: SingleChildScrollView(
+                  child: BaseScaffoldBody(
                     child: Column(
                       children: [
                         const BuildHeader(),
                         const SizedBox(height: 20),
-                        ListView(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
+                        Column(
+                          // physics: const NeverScrollableScrollPhysics(),
+                          // shrinkWrap: true,
                           children: List.generate(
                               model.completedProjectList.length,
                               (index) => CompletedProjectWidget(

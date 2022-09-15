@@ -5,12 +5,13 @@ import '../../../app/app_setup.locator.dart';
 import '../../styles/dimens.dart';
 
 class CancelButton extends StatelessWidget {
-  const CancelButton({Key? key}) : super(key: key);
+  final AlignmentGeometry position;
+  const CancelButton({Key? key, this.position = Alignment.centerLeft}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: Alignment.centerLeft,
+      alignment:position,
       child: Material(
         elevation: 0,
         color: Colors.transparent,

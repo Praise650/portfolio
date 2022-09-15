@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/styles/color.dart';
+import 'package:portfolio/ui/views/responsive_view.dart';
 
 import '../../styles/texts.dart';
 
@@ -25,25 +26,40 @@ class BaseButton extends StatelessWidget {
       elevation: 0,
       color: AppColor.primarySwatch.shade600,
       child: Container(
-        margin: EdgeInsets.all(15.0),
+        margin: const EdgeInsets.all(15.0),
         child: GestureDetector(
           onTap: disabled ? null : onPress,
-          child: isBusy?CircularProgressIndicator(
+          child: isBusy ? CircularProgressIndicator(
             color: AppColor.primarySwatch.shade50,
-          ): getChild(),
+          ) : getChild(),
         ),
       ),
     );
   }
 
   Widget getChild() {
-    if (text != null) {
-      return Text(
-        text!.toUpperCase(),
-        style: kButtonStyle,
-      );
-    } else {
-      return child!;
-    }
+    return Builder(
+      builder: (BuildContext context) {
+        if (text != null) {
+          return Text(
+            text!.toUpperCase(),
+            style: getTextStyle(context),
+          );
+        } else {
+          return child!;
+        }
+      },
+    );
   }
 }
+
+
+TextStyle getTextStyle(BuildContext context) {
+  if (ResponsiveView.isMobile(context) == true) {
+    return kButtonStyle.copyWith(fontSize: 14);
+  } else if (ResponsiveView.isTablet(context) == true){
+  return kButtonStyle.copyWith(fontSize: 16);
+  } else {
+  return kButtonStyle.copyWith(fontSize: 20);
+  }
+  }

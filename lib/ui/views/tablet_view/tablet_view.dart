@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TabletView extends StatefulWidget{
@@ -15,7 +14,7 @@ class _TabletViewState extends State<TabletView>{
         color: Colors.green,
         child: SingleChildScrollView(
           child: Column(
-            children: List.generate(400, (index) => Text('Afuwape Praise ${index-1}')),
+            children: List.generate(100, (index) => Text('Afuwape Praise ${index-1}')),
           ),
         ),
       ),
