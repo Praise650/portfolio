@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
-import '../views/home_page/view_model/home_viewmodel.dart';
+import '../views/home_page/view_model/home_view_model.dart';
 
 class FullScreenDialog extends StatefulWidget {
   final DialogRequest request;
@@ -19,31 +19,31 @@ class FullScreenDialog extends StatefulWidget {
 class _AppFullScreenDialog extends State<FullScreenDialog> {
   @override
   Widget build(BuildContext context) {
-
     CompletedModel model = widget.request.data as CompletedModel;
     return Dialog(
       child: LayoutBuilder(
-          builder: (context, constraints) => SizedBox(
-                height: constraints.maxHeight,
-                width: constraints.maxWidth,
-                child: Container(
-                  color: Colors.white,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(model.projectName),
-                      Material(
-                        child: GestureDetector(
-                          onTap: () {
-                            locator<NavigationService>().back();
-                          },
-                        ),
-                      ),
-                      Text('App FullScreen Dialog'),
-                    ],
+        builder: (context, constraints) => SizedBox(
+          height: constraints.maxHeight,
+          width: constraints.maxWidth,
+          child: Container(
+            color: Colors.white,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(model.projectName),
+                Material(
+                  child: GestureDetector(
+                    onTap: () {
+                      locator<NavigationService>().back();
+                    },
                   ),
                 ),
-              )),
+                const Text('App FullScreen Dialog'),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

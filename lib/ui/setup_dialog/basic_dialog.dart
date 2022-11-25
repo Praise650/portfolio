@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
-import '../views/home_page/view_model/home_viewmodel.dart';
+import '../views/home_page/view_model/home_view_model.dart';
 
 class BasicDialog extends StatelessWidget{
   final DialogRequest request;

@@ -7,7 +7,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
 import '../views/completed_project_details_desc_view.dart';
-import '../views/home_page/view_model/home_viewmodel.dart';
+import '../views/home_page/view_model/home_view_model.dart';
 
 class CompletedProjectWidget extends StatelessWidget {
   final CompletedModel? model;

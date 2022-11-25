@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/ui/layouts/base_scaffold.dart';
 import 'package:portfolio/ui/layouts/base_scaffold_body.dart';
 import 'package:portfolio/ui/styles/color.dart';
-import 'package:portfolio/ui/views/home_page/view_model/home_viewmodel.dart';
+import 'package:portfolio/ui/views/home_page/view_model/home_view_model.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../widgets/build_header_view.dart';

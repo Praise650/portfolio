@@ -5,7 +5,7 @@ import 'package:portfolio/ui/widgets/build_header_view.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../widgets/completed_project_widget.dart';
-import '../home_page/view_model/home_viewmodel.dart';
+import '../home_page/view_model/home_view_model.dart';
 
 class MobileView extends StatefulWidget {
   const MobileView({Key? key}) : super(key: key);

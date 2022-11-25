@@ -6,17 +6,11 @@ import 'buttons/base_button.dart';
 
 class BuildHeader extends StatelessWidget {
   const BuildHeader({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: 20,
-        horizontal: 20,
-        // left: 20,
-        // top: 20,
-        // right: ,
-        // bottom: 20,
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       margin: const EdgeInsets.symmetric(horizontal: 10),
       width: double.infinity,
       decoration: desktopDecoration,

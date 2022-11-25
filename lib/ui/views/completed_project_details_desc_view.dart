@@ -3,7 +3,7 @@ import 'package:portfolio/ui/layouts/base_scaffold.dart';
 import 'package:portfolio/ui/views/responsive_view.dart';
 import 'package:portfolio/ui/widgets/buttons/cancel_button.dart';
 
-import 'home_page/view_model/home_viewmodel.dart';
+import 'home_page/view_model/home_view_model.dart';
 
 class CompletedProjectDetailsDescView extends StatelessWidget {
   final CompletedModel model;
