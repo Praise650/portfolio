@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/styles/color.dart';
-import 'package:portfolio/ui/views/responsive_view.dart';
+import 'package:portfolio/ui/widgets/layout/responsive_widget.dart';
 
 import '../../styles/texts.dart';
 
@@ -55,9 +55,9 @@ class BaseButton extends StatelessWidget {
 
 
 TextStyle getTextStyle(BuildContext context) {
-  if (ResponsiveView.isMobile(context) == true) {
+  if (ResponsiveWidget.isMobile(context) == true) {
     return kButtonStyle.copyWith(fontSize: 14);
-  } else if (ResponsiveView.isTablet(context) == true){
+  } else if (ResponsiveWidget.isTablet(context) == true){
   return kButtonStyle.copyWith(fontSize: 16);
   } else {
   return kButtonStyle.copyWith(fontSize: 20);

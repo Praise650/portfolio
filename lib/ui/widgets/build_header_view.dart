@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import '../styles/decoration.dart';
 import '../styles/texts.dart';
 import 'buttons/base_button.dart';
+import 'layout/responsive_widget.dart';
 
-class BuildHeader extends StatelessWidget {
-  const BuildHeader({Key? key}) : super(key: key);
+class BuildHeaderViewWidget extends StatelessWidget {
+  const BuildHeaderViewWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final mobileView = ResponsiveWidget.isMobile(context);
+    final desktopView = ResponsiveWidget.isMobile(context);
+    final tabletView = ResponsiveWidget.isMobile(context);
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+      padding: mobileView? const EdgeInsets.symmetric(vertical: 20, horizontal: 20):const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       margin: const EdgeInsets.symmetric(horizontal: 10),
       width: double.infinity,
       decoration: desktopDecoration,

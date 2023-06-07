@@ -2,14 +2,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/styles/dimens.dart';
 import 'package:portfolio/ui/styles/texts.dart';
-import 'package:portfolio/ui/views/responsive_view.dart';
+import 'package:portfolio/ui/widgets/layout/responsive_widget.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
-import '../views/completed_project_details_desc_view.dart';
-import '../views/home_page/view_model/home_view_model.dart';
+import '../../core/models/completed_model.dart';
+import '../views/project_details/project_details_view.dart';
 
-class CompletedProjectWidget extends StatelessWidget {
+class SelectedProjectWidget extends StatelessWidget {
   final CompletedModel? model;
   final String projectName;
   final String roleTaken;
@@ -17,7 +17,7 @@ class CompletedProjectWidget extends StatelessWidget {
   final List<String> images;
   bool isHovering = false;
 
-  CompletedProjectWidget(
+  SelectedProjectWidget(
       {Key? key,
       required this.projectName,
       required this.roleTaken,
@@ -36,7 +36,7 @@ class CompletedProjectWidget extends StatelessWidget {
           CarouselSlider(
             items: images.map((e) => Image.asset(e)).toList(),
             options: CarouselOptions(
-              height: ResponsiveView.isMobile(context)?200:300,
+              height: ResponsiveWidget.isMobile(context)?200:300,
               aspectRatio: 1,
               enlargeCenterPage: true,
               enlargeStrategy: CenterPageEnlargeStrategy.scale,
@@ -65,7 +65,7 @@ class CompletedProjectWidget extends StatelessWidget {
           TextButton.icon(
             onPressed: () {
               service.navigateToView(
-                CompletedProjectDetailsDescView(model: model!),
+                ProjectDetailsView(model: model!),
                 // fullscreenDialog: true,
               );
             },

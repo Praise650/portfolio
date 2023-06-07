@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ResponsiveView extends StatelessWidget {
+class ResponsiveWidget extends StatelessWidget {
   final Widget mobile;
   final Widget tablet;
   final Widget desktop;
 
-  const ResponsiveView(
+  const ResponsiveWidget(
       {Key? key,
       required this.mobile,
       required this.tablet,

@@ -3,7 +3,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 import 'app/app_setup.dialog.dart';
 import 'app/app_setup.locator.dart';
-import 'ui/views/home_page/home_page.dart';
+import 'ui/views/site_layout/site_layout.dart';
 
 void main() {
   setupLocator();
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const SiteLayout(),
       navigatorKey: StackedService.navigatorKey,
       // onGenerateRoute: Stacker,
     );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../app/app_setup.locator.dart';
-import '../views/home_page/view_model/home_view_model.dart';
+import '../../core/models/completed_model.dart';
 
 class FullScreenDialog extends StatefulWidget {
   final DialogRequest request;

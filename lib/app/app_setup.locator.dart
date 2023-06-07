@@ -9,6 +9,8 @@
 import 'package:stacked_core/stacked_core.dart';
 import 'package:stacked_services/stacked_services.dart';
 
+import '../ui/views/base_view_model.dart';
+
 final locator = StackedLocator.instance;
 
 Future<void> setupLocator(
@@ -21,4 +23,5 @@ Future<void> setupLocator(
   locator.registerLazySingleton(() => BottomSheetService());
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => DialogService());
+  locator.registerLazySingleton(() => BaseViewViewModel());
 }
