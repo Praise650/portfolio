@@ -126,7 +126,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          run_install: false
+          version: 10.13.1
 
       - name: Setup Node
         uses: actions/setup-node@v4
