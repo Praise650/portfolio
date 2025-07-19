@@ -94,7 +94,6 @@ name: Deploy Next.js site to Pages
 #         id: deployment
 #         uses: actions/deploy-pages@v4
 
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -141,7 +140,7 @@ jobs:
           static_site_generator: next
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build with Next.js
         run: pnpm run build
