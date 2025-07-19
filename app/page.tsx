@@ -13,7 +13,7 @@ interface PageData {
   id: string;
   title: string;
   background: string;
-  content:any
+  content: React.ReactNode;
 }
 
 const StackedMenu: React.FC = () => {
