@@ -99,19 +99,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js 18
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'  # enables pnpm caching automatically
+          cache: 'pnpm'  # Caches node_modules and lockfile automatically
 
-      - name: Setup pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8  # or whatever version you're using
+          version: 8  # Adjust if using a different version
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build the project
+      - name: Build
         run: pnpm run build
