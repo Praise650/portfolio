@@ -8,7 +8,8 @@ export const DATA = {
     With a strong command of modern technologies, I build seamless, innovative solutions tailored to real-world needs.  
     I am passionate about creating impactful tech for communities and enterprises.`,
     // description:"Hey there!. I enjoy creating kickass websites and web/mobile apps, ones that suit your desires and needs using latest technologies and cleanest design patterns.",
-    skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "Node.js", "React.js", "Next.js", "Zustand", "Express.js", "MongoDB", "Laravel", "SQL", "Docker", 'GraphQL'],
+    image: '/hero.jpg',
+    skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "Node.js", "React.js", "Next.js", "Zustand", "Express.js", "MongoDB", "Laravel", "SQL", "Github Actions",],
     email: "ayokanmi1275@gmail.com",
     phone: "+234 8142602528",
     link: [
@@ -36,10 +37,8 @@ export const DATA = {
     mobile applications that address real-world challenges. With several live  
     projects actively in use, my work empowers communities and enterprises by  
     delivering seamless, user-centric technology.
-
     Driven by a commitment to impact, I leverage modern tools and frameworks to create  
     scalable, high-quality solutions that drive growth and transformation.  
-
     Aside from working hard, I tend to enjoy simple things like reading, petting cats,  
     playing the guitar, playing basketball, and other things we humans do. If any of  
     what I said seems interesting, then please do not hesitate to send me a message.`
@@ -117,8 +116,9 @@ export const DATA = {
       name: "GeoTaask",
       title: "GeoTaask",
       results: [
-        { title: "This is a collection of re-usable components." },
-        { title: "You can copy and paste into your web apps." },
+        { title: "This is an app that lets you create location-based tasks or reminders displayed on a map." },
+        { title: "Remind users to buy groceries when near a store." },
+        { title: "Include geofencing for automatic triggers." },
       ],
       link: "",
       code: "https://github.com/Praise650/geotaask",
@@ -130,27 +130,27 @@ export const DATA = {
       name: "Queens-Tree",
       title: "Queens Tree",
       results: [
-        { title: "Developed an AI-powered debate platform." },
-        { title: "Debate summaries with performance scores, resource recommendations," },
+        { title: "Developed a plant identifier application" },
       ],
-      link: "https://debate-arena.vercel.app/",
-      code: "",
+      code: "https://github.com/Praise650/queens-tree",
+      link: "",
       image: '/project/debate.png',
-      tools: ['NextJs 15', 'MongoDB(Prisma ORM)', 'AuthJs'],
-      role: 'Full Stack Developer',
+      tools: ['Flutter', 'Plant.id', 'Firebase Auth', 'Cloud Storage', 'Firebase Storage'],
+      role: 'Mobile Developer',
     },
     {
       name: "Note Now",
-      title: "Notion clone.",
+      title: "Note Now.",
       results: [
-        { title: "Noter serves as the collaborative workspace." },
-        { title: "Where enhanced and more efficient work takes place." },
+        { title: "A note taking app with remote backup." },
+        { title: "Theme based design to switch between light and dark." },
+        { title: "Voice and picture note." },
       ],
-      link: "https://noter-steel.vercel.app/",
-      code: "https://github.com/yogesh2104/noter",
+      link: "",
+      code: "https://github.com/Praise650/note-now",
       image: '/project/noter.png',
-      tools: ['NextJs', 'ConvexDB', 'Clerk Auth'],
-      role: 'Full Stack Developer'
+      tools: ['Flutter', 'Firebase Auth', 'Cloud Storage', 'Firebase Storage'],
+      role: 'Mobile Developer'
     },
     // {
     //   name: "PromptForAi",

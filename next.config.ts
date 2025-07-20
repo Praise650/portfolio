@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/stacked-portfolio",
   output: 'export',
   trailingSlash: true,
   images: {
