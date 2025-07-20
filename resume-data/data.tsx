@@ -1,3 +1,5 @@
+import { getImagePath, getAssetPath } from '../lib/utils'; // Adjust the path based on your file structure
+
 export const BLUR_DELAY = 0.04
 
 export const DATA = {
@@ -8,7 +10,7 @@ export const DATA = {
     With a strong command of modern technologies, I build seamless, innovative solutions tailored to real-world needs.  
     I am passionate about creating impactful tech for communities and enterprises.`,
     // description:"Hey there!. I enjoy creating kickass websites and web/mobile apps, ones that suit your desires and needs using latest technologies and cleanest design patterns.",
-    image: '/hero.jpg',
+    image: getImagePath("/hero.jpg"),
     skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "Node.js", "React.js", "Next.js", "Zustand", "Express.js", "MongoDB", "Laravel", "SQL", "Github Actions",],
     email: "ayokanmi1275@gmail.com",
     phone: "+234 8142602528",
@@ -30,7 +32,7 @@ export const DATA = {
         url: "https://instagram.com/afuwape5"
       }
     ],
-    resume: "/PraiseAfuwape.pdf",
+    resume: getAssetPath("/PraiseAfuwape.pdf"),
     aboutMe: `I am a full-stack and mobile developer based in Lagos, Nigeria,  
     with more than five years of experience crafting innovative digital solutions.  
     Holding a **BSc in Computer Science**, I specialize in building robust web and  
@@ -122,7 +124,7 @@ export const DATA = {
       ],
       link: "",
       code: "https://github.com/Praise650/geotaask",
-      image: '/project/shapexui.png',
+      image: getImagePath("/project/shapexui.png"),
       tools: ['Flutter', 'Google Map', 'Google Places Api', 'Bloc'],
       role: 'Creator',
     },
@@ -134,7 +136,7 @@ export const DATA = {
       ],
       code: "https://github.com/Praise650/queens-tree",
       link: "",
-      image: '/project/debate.png',
+      image: getImagePath("/project/debate.png"),
       tools: ['Flutter', 'Plant.id', 'Firebase Auth', 'Cloud Storage', 'Firebase Storage'],
       role: 'Mobile Developer',
     },
@@ -148,7 +150,7 @@ export const DATA = {
       ],
       link: "",
       code: "https://github.com/Praise650/note-now",
-      image: '/project/noter.png',
+      image: getImagePath("/project/noter.png"),
       tools: ['Flutter', 'Firebase Auth', 'Cloud Storage', 'Firebase Storage'],
       role: 'Mobile Developer'
     },
