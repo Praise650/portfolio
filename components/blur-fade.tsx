@@ -14,7 +14,7 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: any ;
+  inViewMargin?: any ; // eslint-disable-line @typescript-eslint/no-explicit-any
   blur?: string;
 }
 const BlurFade = ({
