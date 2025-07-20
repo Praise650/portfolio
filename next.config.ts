@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  basePath: "/stacked-portfolio",
+  basePath: isProd ? "/portfolio" : '',
   output: 'export',
   trailingSlash: true,
   images: {
