@@ -81,11 +81,22 @@ export const DATA = {
   ],
   experiences: [
     {
-      company: "Accessivo",
+      company: "Accessivo(TechitCheap)",
       role: "Mobile Developer",
       startDate: "April 2025",
       endDate: "June 2025",
       location: "Kwara, NG",
+      description: `At TechitCheap, I served as a Mobile Developer leading the turnaround of a long-delayed fintech application project. 
+      I modernized and deployed the app using Flutter, introducing robust architectural patterns (MVVM with Provider), 
+      advanced data visualization (using fl_chart), and optimized API handling (with the http package). 
+      My contributions significantly improved performance, stability, and user experience, while aligning technical solutions 
+      with business goals and stakeholder expectations.`,
+      achievements: [
+        "Led development of a fintech app in Flutter, implementing time-based graph and cashflow analysis using fl_chart and receipt generation, successfully deploying the project after a two-year delay from previous developers.",
+        "Reduced bug reports by 30% through systematic debugging, robust error handling, and code optimization, delivering a stable and reliable fintech application.",
+        "Optimized API interactions using http package, streamlining data retrieval and improving response times for a seamless user experience in a high-stakes fintech environment.",
+        "Built dynamic financial visualization features with fl_chart, enabling users to analyze cashflow and transaction data across daily, weekly, monthly, and yearly timeframes, improving financial decision-making."
+      ],
       technologies: ["Fluter", "Dart", "fl_charts", "Provider", "Git", "Github Actions", "CI/CD"]
     },
     {
@@ -94,14 +105,49 @@ export const DATA = {
       startDate: "March 2024",
       endDate: " May 2025",
       location: "Lagos NG",
+      description: "At Klama, I contributed to multiple high-impact projects across fintech, logistics, and real estate domains. I led mobile app redevelopment efforts using Flutter and extended into full-stack web development using Laravel and Next.js. I focused on enhancing user experience, system reliability, and performance optimization while managing deployment and security across platforms.",
+      achievements: [
+        {
+          project: "QuickConnect (Bills Payment App):",
+          items: [
+            "Rebuilt a legacy Flutter-based app with poor usability, resolving critical issues in navigation and payment failures.",
+            "Redesigned UI/UX with a modern and intuitive interface, improving accessibility for a broader user base.",
+            "Optimized backend payment APIs and improved integration reliability for secure, seamless transactions.",
+            "Collaborated with UX designers and stakeholders, implementing user feedback that led to increased user trust and positive app reviews."
+          ]
+        },
+        {
+          project: "Enviable Logistics (ELA App):",
+          items: [
+            "Designed and developed ELA, a cross-platform logistics app using Flutter, achieving a 30% reduction in API response times through optimized data handling.",
+            "Ensured smooth performance across iOS and Android by integrating platform-specific features.",
+            "Integrated RESTful APIs for real-time data sync and managed source control with Git for efficient collaboration."
+          ]
+        },
+        {
+          project: "Abuja Rommates (Shortlet Service):",
+          items: [
+            "Developed the backend using Laravel, implementing secure REST APIs for property listing, booking, and user management.",
+            "Built the frontend using Next.js, delivering a responsive web app, admin dashboard, and landing page.",
+            "Handled full deployment on Namecheap (including APIs, admin panel, and frontend), ensuring system-wide security and accessibility."
+          ]
+        }
+      ],
       technologies: ["Flutter", "Laravel", "Tailwind CSS", "SQL", "Stacked", "Next.js", "Postman"]
     },
     {
       company: "Aipalbot",
       role: "Mobile Developer",
-      startDate: "Aug 2020",
+      startDate: "Aug 2022",
       endDate: "June 2024",
       location: "San Francisco, USA",
+      description: "Developed and maintained mobile application using Flutter, focusing on user experience optimization and robust architecture implementation.",
+      achievements: [
+        "Built intuitive UI screens with Flutter, boosting user engagement by 25% based on feedback analytics.",
+        "Integrated RESTful APIs and SOAP web services, streamlining authentication and data rendering across platforms.",
+        "Designed MVVM architecture for UI components, improving code maintainability and scalability.",
+        "Leveraged Android Studio, Git, and GitHub for development and version control."
+      ],
       technologies: ["Dart", "Flutter", "Firebase"]
     },
     // {
