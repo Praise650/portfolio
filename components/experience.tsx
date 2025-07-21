@@ -178,7 +178,7 @@ function Experience() {
                       {experience.achievements.map((achievement, achievementIndex) => (
                         <div key={achievementIndex}>
                           {/* Check if it's a project with nested items */}
-                          {achievement.project && achievement.items ? (
+                          {typeof achievement === 'object' && achievement.project && achievement.items ? (
                             <div className="space-y-3">
                               {/* Project title */}
                               <div className="flex items-start">
@@ -204,7 +204,7 @@ function Experience() {
                             <div className="flex items-start">
                               <span className="text-emerald-400 mr-3 mt-1 text-xs">•</span>
                               <span className="text-gray-300 text-sm md:text-base leading-relaxed">
-                                {typeof achievement === 'string' ? achievement : achievement.text}
+                                {typeof achievement === 'string' ? achievement : ''}
                               </span>
                             </div>
                           )}
