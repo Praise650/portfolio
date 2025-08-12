@@ -85,7 +85,7 @@ import { DATA } from "@/resume-data/data"
 //                   </h4>
 //                   <div className="md:text-xl mt-1">{experience.location}</div>
 //                 </div>
-
+                
 //                 {/* Description section */}
 //                 {experience.description && (
 //                   <div className="mt-4">
@@ -94,7 +94,7 @@ import { DATA } from "@/resume-data/data"
 //                     </p>
 //                   </div>
 //                 )}
-
+                
 //                 {/* Key achievements/responsibilities list */}
 //                 {experience.achievements && experience.achievements.length > 0 && (
 //                   <div className="mt-4">
@@ -110,7 +110,7 @@ import { DATA } from "@/resume-data/data"
 //                     </ul>
 //                   </div>
 //                 )}
-
+                
 //                 <div className="flex flex-wrap gap-2 mt-6">
 //                   {experience.technologies.map((tech) => (
 //                     <span
@@ -161,7 +161,7 @@ function Experience() {
                   </h4>
                   <div className="md:text-xl mt-1">{experience.location}</div>
                 </div>
-
+                
                 {/* Description section */}
                 {experience.description && (
                   <div className="mt-4">
@@ -170,25 +170,50 @@ function Experience() {
                     </p>
                   </div>
                 )}
-
-                {/* Key achievements/responsibilities list */}
+                
+                Key achievements/responsibilities list
                 {experience.achievements && experience.achievements.length > 0 && (
                   <div className="mt-4">
                     <div className="space-y-4">
                       {experience.achievements.map((achievement, achievementIndex) => (
                         <div key={achievementIndex}>
-                          <div className="flex items-start">
-                            <span className="text-emerald-400 mr-3 mt-1 text-xs">•</span>
-                            <span className="text-gray-300 text-sm md:text-base leading-relaxed">
-                              {typeof achievement === 'string' ? achievement : ''}
-                            </span>
-                          </div>
+                          {/* Check if it's a project with nested items */}
+                          {typeof achievement === 'object' && achievement.project && achievement.items ? (
+                            <div className="space-y-3">
+                              {/* Project title */}
+                              <div className="flex items-start">
+                                <span className="text-emerald-400 mr-3 mt-1 text-xs font-bold">•</span>
+                                <h5 className="text-white font-semibold text-sm md:text-base">
+                                  {achievement.project}
+                                </h5>
+                              </div>
+                              {/* Project items */}
+                              <ul className="ml-6 space-y-2">
+                                {achievement.items.map((item, itemIndex) => (
+                                  <li key={itemIndex} className="flex items-start">
+                                    <span className="text-emerald-400 mr-3 mt-1 text-xs">◦</span>
+                                    <span className="text-gray-300 text-sm md:text-base leading-relaxed">
+                                      {item}
+                                    </span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ) : (
+                            /* Simple achievement item */
+                            <div className="flex items-start">
+                              <span className="text-emerald-400 mr-3 mt-1 text-xs">•</span>
+                              <span className="text-gray-300 text-sm md:text-base leading-relaxed">
+                                {typeof achievement === 'string' ? achievement : ''}
+                              </span>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
                   </div>
                 )}
-
+                
                 <div className="flex flex-wrap gap-2 mt-6">
                   {experience.technologies.map((tech) => (
                     <span
