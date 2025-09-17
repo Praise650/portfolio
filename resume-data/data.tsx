@@ -11,7 +11,7 @@ export const DATA = {
     I am passionate about creating impactful tech for communities and enterprises.`,
     // description:"Hey there!. I enjoy creating kickass websites and web/mobile apps, ones that suit your desires and needs using latest technologies and cleanest design patterns.",
     image: getImagePath("/hero.jpg"),
-    skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "Node.js", "React.js", "Next.js", "Zustand", "Express.js", "MongoDB", "Laravel", "SQL", "Github Actions",],
+    skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "React.js", "Next.js", "Zustand", "Laravel", "SQL", "Github Actions",],
     email: "ayokanmi1275@gmail.com",
     phone: "+234 8142602528",
     link: [
