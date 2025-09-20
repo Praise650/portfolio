@@ -11,7 +11,7 @@ export const DATA = {
     I am passionate about creating impactful tech for communities and enterprises.`,
     // description:"Hey there!. I enjoy creating kickass websites and web/mobile apps, ones that suit your desires and needs using latest technologies and cleanest design patterns.",
     image: getImagePath("/hero.jpg"),
-    skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "Node.js", "React.js", "Next.js", "Zustand", "Express.js", "MongoDB", "Laravel", "SQL", "Github Actions",],
+    skill: ["Flutter", "Dart", "Bloc", "Provider", "Hive", "Stacked", "Firebase", "React.js", "Next.js", "Zustand", "Laravel", "SQL", "Github Actions",],
     email: "ayokanmi1275@gmail.com",
     phone: "+234 8142602528",
     link: [
@@ -325,8 +325,9 @@ export const DATA = {
       name: "GeoTaask",
       title: "GeoTaask",
       results: [
-        { title: "This is an app that lets you create location-based tasks or reminders displayed on a map." },
-        { title: "Remind users to buy groceries when near a store." },
+        { title: "GeoTaask is a Flutter-based mobile application that revolutionizes task management by combining location awareness with smart reminders. Users can create location-specific tasks that automatically trigger when they enter predefined geographical areas, making it perfect for context-sensitive productivity and daily life management." },
+        { title: "Developed location-based task management Flutter application using BLoC pattern for state management, enabling users to create and manage location-triggered reminders displayed on an interactive map interface" },
+        { title: "Implemented geofencing functionality with automatic task triggering when users enter predefined geographical areas, enhancing productivity through context-aware notifications."},
         { title: "Include geofencing for automatic triggers." },
       ],
       link: "",
